@@ -32,3 +32,12 @@ use Mix.Config
 config :issues, github_url: "https://api.github.com"
 
 config :logger, compile_time_purge_level: :info
+
+config :oauth2, debug: true
+
+# https://github.com/scrogson/oauth2
+# https://github.com/scrogson/oauth2_example
+config :oauth2, GitHub,
+  client_id: System.get_env("GITHUB_CLIENT_ID"),
+  client_secret: System.get_env("GITHUB_CLIENT_SECRET"),
+  redirect_uri: System.get_env("GITHUB_REDIRECT_URI")
