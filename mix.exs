@@ -5,6 +5,8 @@ defmodule Issues.Mixfile do
     [
       app: :issues,
       version: "0.1.0",
+      name: "Issues",
+      source_url: "https://github.com/mkreyman/issues",
       elixir: "~> 1.5",
       escript: escript_config(),
       start_permanent: Mix.env == :prod,
@@ -26,8 +28,9 @@ defmodule Issues.Mixfile do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       { :httpoison, "~> 0.4" },
       { :jsx, "~> 2.0" },
-      { :oauth2, "~> 0.9"}, # https://github.com/scrogson/oauth2
-      { :poison, "~> 1.3 or ~> 2.0"}
+      { :oauth2, "~> 0.9" }, # https://github.com/scrogson/oauth2
+      { :poison, "~> 1.3 or ~> 2.0" },
+      { :ex_doc, github: "elixir-lang/ex_doc" }
     ]
   end
 
